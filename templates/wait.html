@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <!-- Cabeçalho do site -->
+  <head>
+    <title>Login - Kendo</title>
+    <!-- CSS do Cabeçalho -->
+    <link rel="stylesheet" type="text/css" href="/static/style_loginscreen.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@500&display=swap" rel="stylesheet" />
+    <link rel="icon" type="image/png" href="{{ url_for('static', filename='iconeKendo.png') }}" />
+  </head>
+    <h1 class="title">Você criou sua conta com sucesso! Agora só esperar em torno de 24 horas para os administradores liberarem seu acesso para utilizar a plataforma!.</h1>
+  <br/>
+  <body>
+    <div class="container" id="container">
+        <img src="/static/waitclock.png" alt="relogioIMG" width="400">
+        <a href="/login"><button id="waitButton">Voltar para Login!</button></a>
+    </div>
+  </body>
+</html>

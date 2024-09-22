@@ -1,0 +1,240 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+    background-color: #f5f5f5;
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+}
+
+.sidebar {
+    background-color: #1d1d1d;
+    width: 250px;
+    padding: 20px;
+    color: #fff;
+}
+
+.sidebar h2 {
+    margin-bottom: 20px;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar li {
+    margin-bottom: 10px;
+}
+
+.sidebar a {
+    color: #fff;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+.sidebar i {
+    margin-right: 10px;
+}
+
+.main {
+    flex: 1;
+    padding: 20px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.header h1 {
+    margin: 0;
+}
+
+.header .nav {
+    display: flex;
+    align-items: center;
+}
+
+.header .nav i {
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.cards {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.card {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 23%;
+    text-align: center;
+}
+
+.card h2 {
+    margin: 0;
+    font-size: 18px;
+}
+
+.card p {
+    margin: 10px 0;
+    font-size: 14px;
+}
+
+.card i {
+    font-size: 24px;
+    color: #2196f3;
+}
+
+.overview {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.overview h2 {
+    margin-bottom: 20px;
+}
+
+.overview .chart {
+    height: 300px;
+}
+
+.activity {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.activity h2 {
+    margin-bottom: 20px;
+}
+
+.activity .chart {
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    background-color: #4CAF50;
+    color: #fff;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.activity .chart-inner {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    background-color: #00BCD4;
+    color: #fff;
+    font-size: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.activity .chart-inner-inner {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background-color: #FFC107;
+    color: #fff;
+    font-size: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.transactions {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.transactions h2 {
+    margin-bottom: 20px;
+}
+
+.transactions table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.transactions th,
+.transactions td {
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+
+.transactions th {
+    background-color: #f5f5f5;
+}
+
+.transactions .status {
+    text-align: right;
+}
+
+.transactions .status .completed {
+    color: #4CAF50;
+}
+
+.transactions .status .pending {
+    color: #FFC107;
+}
+
+.transactions .profile-picture {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.user-info {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    margin-top: 170px;
+}
+
+.card_total {
+    height: 100%;
+    width: 100%;
+    background-color: black;
+}
+
+.user-info img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 10px;
+}
+
+.user-info p {
+    margin: 0;
+    color: black;
+}
+
+.user-info .role {
+    color: #9E9E9E;
+}
+
+.card_total {
+    color: black;
+}

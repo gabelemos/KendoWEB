@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<!--Cabeçalho do site -->
+<head>
+	<title>Login - Kendo</title>
+	<!--CSS do Cabeçalho -->
+	<link rel="stylesheet" type="text/css" href="/static/style_loginscreen.css">
+	<link href="https://fonts.googleapis.com/css2?family=Jost:wght@500&display=swap" rel="stylesheet">
+	<link rel="icon" type="image/png" href="{{ url_for('static', filename='iconeKendo.png') }}">
+</head>
+{% if Logado == True %}
+<h1 class="title">Você criou sua conta com sucesso! Realize login na plataforma.</h1>
+{% endif %}
+{% if Erro == True %}
+<h1 class="title_err">Erro! Tente realizar seu registro ou login novamente.</h1>
+{% endif %}
+<br>
+<body>
+<div class="container" id="container">
+	<!--Formulario para resgistrar-->
+	<div class="form-container sign-up-container">
+		<form action="/registrar", method="post">
+			<h1>Crie sua conta</h1>
+			<input type="text" placeholder="Nome" name="NOME"/>
+			<input type="email" placeholder="Email" name="EMAIL"/>
+			<h5 class="desc">Selecione a sua empresa:</h5>
+			<select name="EMPRE">
+				{% for empresa in nome_empresa %}
+				<option value={{empresa[0]}}>{{empresa[1]}}</option>
+				{% endfor %}
+			  </select>
+			<input type="text" placeholder="Telefone" name="TEL"/>
+			<input type="password" placeholder="Senha" name="KEY"/>
+			<button>Sign Up</button>
+		</form>
+	</div>
+	<!--Formulario para logar-->
+	<div class="form-container sign-in-container">
+		<form action="/login", method="post">
+			<h1>Login</h1>
+			<input type="email" name="email" placeholder="Email" />
+			<input type="password" name="senha" placeholder="Password" />
+			<a href="#">Esqueceu sua senha? Clique aqui</a>
+			<button>Login</button>
+		</form>
+	</div>
+	<div class="overlay-container">
+		<div class="overlay">
+			<div class="overlay-panel overlay-left">
+				<h1>Bem vindo de volta!</h1>
+				<p>Para seguir e utilizar a plataforma, clique no botão abaixo</p>
+				<button class="ghost" id="signIn">Login</button>
+			</div>
+			<div class="overlay-panel overlay-right">
+				<h1>Olá!</h1>
+				<p>Coloque seus dados após clicar no botão abaixo, e se registre!</p>
+				<button class="ghost" id="signUp">Registre-se</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script>
+	const signUpButton = document.getElementById('signUp');
+	const signInButton = document.getElementById('signIn');
+	const container = document.getElementById('container');
+
+	signUpButton.addEventListener('click', () => {
+		container.classList.add("right-panel-active");
+	});
+
+	signInButton.addEventListener('click', () => {
+		container.classList.remove("right-panel-active");
+	});
+</script>
+
+</body>
+</html>

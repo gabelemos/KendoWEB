@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/static/style_users.css" media="screen">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="icon" type="image/png" href="{{ url_for('static', filename='iconeKendo.png') }}">
+    <title>Funcionários - Kendo</title>
+</head>
+<body>
+        
+    <div class="container">
+        <!-- aside section start-->                         
+        <aside>
+            <div class="top">
+                <div class="logo">
+                    <svg viewBox="0 0 2048 1545" width="150" height="150" xmlns="http://www.w3.org/2000/svg"><path d="M1000 600h28l24 3 14 4 15 6 17 9 14 10 13 12 11 14 10 15 8 17 7 21 3 13 1 10 1 185-3 10-7 10-5 6-10 7-11 3h-12l-12-5-12-11-7-12-2-6-1-14-1-176-5-13-6-11-10-12-11-9-12-6-11-3h-24l-12 3-12 5-14 12-10 10-8 10-4 8-1 15-1 71-2 16-5 17-11 26-8 16-10 18-12 16-8 11-14 15-12 11-18 13-24 13-28 12-18 6-15 3-21 2-30 1-26-1-16-3-15-5-35-16-22-12-11-8-10-9-8-7-16-17-9-11-10-12-12-17-12-22-9-19-5-15-4-16-1-7v-34l7-37 8-23 12-25 10-16 12-14 9-10 9-8 16-10 23-12 23-9 19-5 18-2h24l23 3 19 5 25 9 16 8 13 9 12 11 12 13 12 16 9 15 8 16 5 14 4 18 1 19-2 15-6 12-9 9-10 5-3 1-24 1H584l-8 2-2 2v9l8 22 10 20 10 15 12 14 12 11 28 17 15 8 9 3 8 1h41l17-1 17-4 16-6 18-11 18-13 14-12 11-14 8-13 14-33 2-7 1-57V641l3-12 7-10 7-7 10-5 9-2h10l10 3 9 6 5 6v2l4 2 4-1 15-11 17-8 17-3zm-364 67-15 3-14 7-13 10-10 10-11 14-7 10-3 7 1 5 4 4 23 1 89 1h69l5-2 4-5-1-7-9-10-7-7h-2l-1-3-8-7-13-13-13-9-13-6-17-3z" fill="#FFFFF"/><path d="m1507 428 14 1 12 4 9 6 5 6 3 12 1 465-3 7-6 8-6 5-11 5-9 2-10 1-45 1h-113l-18-2-20-7-16-7-16-10-14-11-13-11-8-8-12-16-9-16-8-17-7-19-6-25-1-7v-40l2-15 5-19 9-25 8-16 7-11 11-14 14-14 16-12 18-11 21-9 18-4 26-3h31l25 4 20 6 16 8 16 13 7 2 1-6 1-17 1-149 3-14 6-9 5-5 8-5zm-146 189-12 4-9 7-6 10-3 9v12l4 11 6 8 10 10 5 4 2 7 1 79 3 5 4 2 73 1 2 2v65l-5 2-11 9-7 9-4 10-1 4v8l4 13 6 9 6 5 8 4 7 2 15 1 14-3 9-6 6-7 4-10v-18l-3-10-6-9-13-12h-2l-2-5-1-11v-69l-4-8h-11l-7 1h-54l-5-1-1-3h-2v-49l1-13 3-5 13-10 8-9 4-8 1-6v-11l-3-10-7-10-9-6-7-3-5-1z" fill="#66B0DC"/><path d="M198 429h17l14 3 6 3 5 5 4 7 2 10v255l1 39 4 2 4-1 29-29 8-7 12-11 15-14 7-7 8-7 47-47 8-7 11-10 14-8 10-2h8l10 2 12 6 8 7 6 10 3 14-1 12-6 12-23 23-8 7-15 14-8 7-17 16-10 9-16 16-7 9 1 5 9 11 11 12 7 8 12 13 7 8 11 12 7 8 13 14 7 8 9 10 9 11 7 10 3 7v14l-4 13-7 10-8 6-12 5-13 1-10-3-8-6-25-25-7-8-7-7-7-8-9-10-7-8-11-12-7-8-15-16-14-14-7-6-6 1-10 8-16 15-11 11-6 10-1 4-1 15-1 35-2 11-5 10-8 6-6 2-8 1h-9l-11-2-12-6-6-5-3-6-1-6V460l2-16 6-8 6-4z" fill="#FFFFF"/><path d="M1747 593h43l19 3 17 5 20 8 20 11 14 10 14 12 12 12 11 14 12 18 8 15 8 21 4 17 3 23v31l-2 18-4 19-10 25-10 19-13 18-11 13-12 12-15 11-19 12-23 11-24 7-24 4h-31l-24-4-26-8-20-9-17-10-16-12-12-11-9-9-11-15-9-16-9-19-12-36-3-14-1-19 1-22 3-17 5-17 8-21 8-16 8-14 8-11 12-14 10-10 14-11 18-11 15-8 24-9 16-4zm13 71-20 3-12 4-19 10-10 8-10 9-11 14-8 14-6 15-3 13-1 9v29l4 19 8 17 9 14 11 12 7 7 16 11 13 6 18 5 14 2h19l17-3 14-4 16-8 12-9 12-11 8-10 8-12 7-16 4-18 1-6v-24l-3-17-5-16-7-14-10-14-9-10-11-9-13-8-15-7-13-3-15-2z" fill="#FFFFF"/></svg>                </div>
+                <div class="close">
+                    <span class="material-symbols-sharp">
+                        close
+                    </span>
+                </div>
+            </div>
+            <!-- End top -->
+            <div class="sidebar">
+
+                <a href="{{ url_for('HomeScreen') }}">
+                    <span class="material-symbols-sharp">home</span>
+                    <h3>Página Inicial</h3>
+                </a>
+
+                <a href="/analises">
+                    <span class="material-symbols-sharp">receipt_long</span>
+                    <h3>Análises</h3>
+                </a>
+                {%if session['nivel'] == 'caixa' or session['nivel'] == 'dev'%}
+                <a href="/financeiro">
+                    <span class="material-symbols-sharp">sell</span>
+                    <h3>Vendas</h3>
+                </a>
+                {% endif %}
+
+                <a href="/empresas">
+                    <span class="material-symbols-sharp">storefront</span>
+                    <h3>Empresas</h3>
+                </a>
+
+                <a href="/produtos">
+                    <span class="material-symbols-sharp">shopping_bag</span>
+                    <h3>Produtos</h3>
+                </a>
+
+                <a href="/funcionarios" class="active">
+                    <span class="material-symbols-sharp">person_apron</span>
+                    <h3>Funcionarios</h3>
+                </a>
+                
+                <a href="/logout">
+                    <span class="material-symbols-sharp">logout</span>
+                    <h3>Sair</h3>
+                </a>
+
+
+            </div>
+
+        </aside>
+        <!-- aside section end-->
+
+        <!--main section start-->
+        <main>
+            <h1>Funcionarios</h1>
+            
+            <div class="insights">
+            <!-- end inside-->
+                <!-- start recent orders -->
+                <div class="recent_order">
+                    <h1>Lista de Funcionários:</h1>
+                    <div>
+                    {% for funcionario in funcionarios %}
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Nome do funcionário</th>
+                                    <th>Empresa do funcionário</th>
+                                    {% if usuario == 'adm' %}
+                                        <th>EDITAR</th>
+                                        <th>DELETAR</th>
+                                    {% endif %}
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>{{funcionario[3]}}</td>
+                                    <td>{{funcionario[11]}}</td>
+                                    {% if usuario == 'adm' %}
+                                        <td class="edit"><a class="material-symbols-sharp" id="edit">edit</a></td>
+                                        <td class="delete">
+                                            <form action="/deleteUser" method="post">
+                                                <input type="text" name="nome_user" value="{{funcionario[3]}}" hidden>
+                                                <button type="submit" class="material-symbols-sharp" id="delete">close</button>
+                                            </form>
+                                        </td>
+                                    {% endif %}
+                                    <td class="primary">:D</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        {% endfor %}
+                    </div>
+                    
+                </div>
+        </main>
+        <!--main section end-->
+
+        <!--right section start-->
+           <!-- <div class="right">
+                <h1>Right</h1>
+            </div>
+        <!--right section end-->
+    </div>
+</body>
+</html>
